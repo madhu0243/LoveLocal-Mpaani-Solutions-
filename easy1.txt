@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <string.h>
+
+int length(char *s) {
+    int len = 0;
+    int i = strlen(s) - 1;
+    while (i >= 0 && s[i] == ' ') {
+        i--;
+    }
+    while (i >= 0 && s[i] != ' ') {
+        len++;
+        i--;
+    }
+
+    return len;
+}
+
+int main() {
+    char s[] =  "   fly me   to   the moon  ";
+    int res = length(s);
+
+    printf("Output: %d\n", result);
+
+    return 0;
+}
